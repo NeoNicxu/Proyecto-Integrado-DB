@@ -27,8 +27,9 @@ const pool = new Pool({
 
 // --- Tablas sincronizables y columnas permitidas (lista blanca) --------
 const TABLES = {
-  parcelas: ['nombre', 'cultivo', 'superficie_ha', 'latitud', 'longitud', 'notas'],
-  visitas: ['parcela_id', 'fecha_visita', 'estado_cultivo', 'plagas_detectadas', 'recomendaciones'],
+  obras: ['nombre', 'ubicacion', 'estado', 'fecha_inicio'],
+  inventario: ['obra_id', 'item', 'cantidad', 'estado_material'],
+  checklists: ['obra_id', 'fecha_revision', 'observaciones', 'aprobado']
 };
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
